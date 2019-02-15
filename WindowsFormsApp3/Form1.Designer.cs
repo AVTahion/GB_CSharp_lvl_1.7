@@ -33,6 +33,10 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.lblNumber = new System.Windows.Forms.Label();
             this.lblCounter = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.StripMenu1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblNumb = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCommand1
@@ -72,7 +76,7 @@
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(13, 13);
             this.lblNumber.TabIndex = 3;
-            this.lblNumber.Text = "0";
+            this.lblNumber.Text = "1";
             // 
             // lblCounter
             // 
@@ -83,18 +87,49 @@
             this.lblCounter.TabIndex = 4;
             this.lblCounter.Text = "0";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenu1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(321, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // StripMenu1
+            // 
+            this.StripMenu1.Name = "StripMenu1";
+            this.StripMenu1.Size = new System.Drawing.Size(57, 20);
+            this.StripMenu1.Text = "Играть";
+            this.StripMenu1.Click += new System.EventHandler(this.StripMenu1_Click);
+            // 
+            // lblNumb
+            // 
+            this.lblNumb.AutoSize = true;
+            this.lblNumb.Location = new System.Drawing.Point(36, 96);
+            this.lblNumb.Name = "lblNumb";
+            this.lblNumb.Size = new System.Drawing.Size(13, 13);
+            this.lblNumb.TabIndex = 6;
+            this.lblNumb.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 157);
+            this.Controls.Add(this.lblNumb);
             this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCommand2);
             this.Controls.Add(this.btnCommand1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Удвоитель";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +142,9 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblCounter;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem StripMenu1;
+        private System.Windows.Forms.Label lblNumb;
     }
 }
 
